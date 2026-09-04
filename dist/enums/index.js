@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ActivityType = exports.PaymentStatus = exports.MembershipStatus = exports.TaskStatus = exports.TaskPriority = exports.FollowUpStatus = exports.LeadStatus = exports.TenantStatus = exports.IndustryCode = void 0;
+exports.CommunicationTrigger = exports.CommunicationStatus = exports.ReminderTriggerType = exports.MessageType = exports.MessageChannel = exports.ActivityType = exports.PaymentStatus = exports.MembershipStatus = exports.TaskStatus = exports.TaskPriority = exports.FollowUpStatus = exports.LeadStatus = exports.TenantStatus = exports.IndustryCode = void 0;
 var IndustryCode;
 (function (IndustryCode) {
     IndustryCode["GYM"] = "gym";
@@ -68,3 +68,42 @@ var ActivityType;
     ActivityType["EMAIL"] = "email";
     ActivityType["SYSTEM"] = "system";
 })(ActivityType || (exports.ActivityType = ActivityType = {}));
+var MessageChannel;
+(function (MessageChannel) {
+    MessageChannel["EMAIL"] = "email";
+    MessageChannel["WHATSAPP"] = "whatsapp";
+})(MessageChannel || (exports.MessageChannel = MessageChannel = {}));
+var MessageType;
+(function (MessageType) {
+    MessageType["WELCOME"] = "welcome";
+    MessageType["BIRTHDAY"] = "birthday";
+    MessageType["EXPIRY"] = "expiry";
+    MessageType["PAYMENT"] = "payment";
+    MessageType["REMINDER"] = "reminder";
+    MessageType["ANNOUNCEMENT"] = "announcement";
+    MessageType["FOLLOW_UP"] = "follow_up";
+    MessageType["CUSTOM"] = "custom";
+})(MessageType || (exports.MessageType = MessageType = {}));
+var ReminderTriggerType;
+(function (ReminderTriggerType) {
+    ReminderTriggerType["MEMBERSHIP_EXPIRY"] = "membership_expiry";
+    ReminderTriggerType["BIRTHDAY"] = "birthday";
+    ReminderTriggerType["PAYMENT_DUE"] = "payment_due";
+    ReminderTriggerType["CUSTOM_DAYS"] = "custom_days";
+    ReminderTriggerType["APPOINTMENT_REMINDER"] = "appointment_reminder";
+    ReminderTriggerType["VISIT_REMINDER"] = "visit_reminder";
+    ReminderTriggerType["SERVICE_REMINDER"] = "service_reminder";
+    ReminderTriggerType["VEHICLE_DUE"] = "vehicle_due";
+})(ReminderTriggerType || (exports.ReminderTriggerType = ReminderTriggerType = {}));
+var CommunicationStatus;
+(function (CommunicationStatus) {
+    CommunicationStatus["SENT"] = "sent";
+    CommunicationStatus["FAILED"] = "failed";
+    CommunicationStatus["PENDING_WHATSAPP"] = "pending_whatsapp";
+    CommunicationStatus["SKIPPED"] = "skipped";
+})(CommunicationStatus || (exports.CommunicationStatus = CommunicationStatus = {}));
+var CommunicationTrigger;
+(function (CommunicationTrigger) {
+    CommunicationTrigger["MANUAL"] = "manual";
+    CommunicationTrigger["AUTOMATION"] = "automation";
+})(CommunicationTrigger || (exports.CommunicationTrigger = CommunicationTrigger = {}));

@@ -44,6 +44,8 @@ export interface TenantDto {
   status: TenantStatus;
   industry: IndustryCode;
   enabledModules: string[];
+  logoUrl?: string | null;
+  logoFileId?: string | null;
 }
 
 export interface CustomerDto {
@@ -54,6 +56,16 @@ export interface CustomerDto {
   phone?: string | null;
   tags: string[];
   notes?: string | null;
+  profilePhotoUrl?: string | null;
+  profilePhotoFileId?: string | null;
+  joinedAt?: string | null;
+  dateOfBirth?: string | null;
+  gender?: string | null;
+  bloodGroup?: string | null;
+  fitnessGoal?: string | null;
+  address?: string | null;
+  emergencyContactName?: string | null;
+  emergencyContactPhone?: string | null;
   createdAt: string;
   updatedAt: string;
 }

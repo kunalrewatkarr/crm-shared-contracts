@@ -26,6 +26,10 @@ export declare const PERMISSIONS: {
     readonly REPORTS_VIEW: "reports.view";
     readonly NOTIFICATIONS_VIEW: "notifications.view";
     readonly NOTIFICATIONS_MANAGE: "notifications.manage";
+    readonly COMMUNICATIONS_VIEW: "communications.view";
+    readonly COMMUNICATIONS_SEND: "communications.send";
+    readonly COMMUNICATIONS_TEMPLATES_MANAGE: "communications.templates.manage";
+    readonly COMMUNICATIONS_RULES_MANAGE: "communications.rules.manage";
     readonly FILES_VIEW: "files.view";
     readonly FILES_CREATE: "files.create";
     readonly FILES_DELETE: "files.delete";
@@ -42,6 +46,16 @@ export declare const PERMISSIONS: {
     readonly GYM_ATTENDANCE_MANAGE: "gym.attendance.manage";
     readonly GYM_PAYMENTS_VIEW: "gym.payments.view";
     readonly GYM_PAYMENTS_MANAGE: "gym.payments.manage";
+    readonly SALON_VIEW: "salon.view";
+    readonly SALON_MANAGE: "salon.manage";
+    readonly CLINIC_VIEW: "clinic.view";
+    readonly CLINIC_MANAGE: "clinic.manage";
+    readonly COACHING_VIEW: "coaching.view";
+    readonly COACHING_MANAGE: "coaching.manage";
+    readonly VEHICLE_VIEW: "vehicle.view";
+    readonly VEHICLE_MANAGE: "vehicle.manage";
+    readonly REAL_ESTATE_VIEW: "real_estate.view";
+    readonly REAL_ESTATE_MANAGE: "real_estate.manage";
     readonly AUDIT_VIEW: "audit.view";
 };
 export type PermissionName = (typeof PERMISSIONS)[keyof typeof PERMISSIONS];
