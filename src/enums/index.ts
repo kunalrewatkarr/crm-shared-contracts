@@ -5,6 +5,7 @@ export enum IndustryCode {
   REAL_ESTATE = 'real_estate',
   COACHING = 'coaching',
   CLINIC = 'clinic',
+  AGRI_WHOLESALE = 'agri_wholesale',
 }
 
 export enum TenantStatus {

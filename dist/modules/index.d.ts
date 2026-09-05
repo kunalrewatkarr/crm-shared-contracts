@@ -30,6 +30,14 @@ export declare const INDUSTRY_MODULE_CODES: {
     readonly REAL_ESTATE: "real_estate";
     readonly REAL_ESTATE_PROPERTIES: "real_estate_properties";
     readonly REAL_ESTATE_VISITS: "real_estate_visits";
+    readonly AGRI_WHOLESALE: "agri_wholesale";
+    readonly AGRI_PRODUCTS: "agri_products";
+    readonly AGRI_PROCUREMENT: "agri_procurement";
+    readonly AGRI_INVENTORY: "agri_inventory";
+    readonly AGRI_SALES: "agri_sales";
+    readonly AGRI_RATES: "agri_rates";
+    readonly AGRI_FINANCE: "agri_finance";
+    readonly AGRI_REPORTS: "agri_reports";
 };
 export type CoreModuleCode = (typeof CORE_MODULES)[keyof typeof CORE_MODULES];
 export type IndustryModuleCode = (typeof INDUSTRY_MODULE_CODES)[keyof typeof INDUSTRY_MODULE_CODES];
@@ -81,5 +89,12 @@ export declare const DEMO_TENANTS: readonly [{
     readonly industry: IndustryCode.REAL_ESTATE;
     readonly adminEmail: "admin@realestate.nexhub.local";
     readonly adminName: "Realty Admin";
+}, {
+    readonly id: "11111111-1111-4111-8111-111111111107";
+    readonly name: "AgriLink Mandi";
+    readonly slug: "agrilink-mandi";
+    readonly industry: IndustryCode.AGRI_WHOLESALE;
+    readonly adminEmail: "admin@agri.nexhub.local";
+    readonly adminName: "Agri Admin";
 }];
 export declare const DEMO_TENANT_PASSWORD = "Password123!";

@@ -9,6 +9,7 @@ var IndustryCode;
     IndustryCode["REAL_ESTATE"] = "real_estate";
     IndustryCode["COACHING"] = "coaching";
     IndustryCode["CLINIC"] = "clinic";
+    IndustryCode["AGRI_WHOLESALE"] = "agri_wholesale";
 })(IndustryCode || (exports.IndustryCode = IndustryCode = {}));
 var TenantStatus;
 (function (TenantStatus) {

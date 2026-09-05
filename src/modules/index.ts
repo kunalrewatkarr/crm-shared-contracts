@@ -32,6 +32,14 @@ export const INDUSTRY_MODULE_CODES = {
   REAL_ESTATE: 'real_estate',
   REAL_ESTATE_PROPERTIES: 'real_estate_properties',
   REAL_ESTATE_VISITS: 'real_estate_visits',
+  AGRI_WHOLESALE: 'agri_wholesale',
+  AGRI_PRODUCTS: 'agri_products',
+  AGRI_PROCUREMENT: 'agri_procurement',
+  AGRI_INVENTORY: 'agri_inventory',
+  AGRI_SALES: 'agri_sales',
+  AGRI_RATES: 'agri_rates',
+  AGRI_FINANCE: 'agri_finance',
+  AGRI_REPORTS: 'agri_reports',
 } as const;
 
 export type CoreModuleCode = (typeof CORE_MODULES)[keyof typeof CORE_MODULES];
@@ -109,6 +117,22 @@ export const INDUSTRY_DEFAULT_MODULES: Record<IndustryCode, string[]> = {
     INDUSTRY_MODULE_CODES.REAL_ESTATE_PROPERTIES,
     INDUSTRY_MODULE_CODES.REAL_ESTATE_VISITS,
   ],
+  [IndustryCode.AGRI_WHOLESALE]: [
+    CORE_MODULES.CORE_CRM,
+    CORE_MODULES.LEADS,
+    CORE_MODULES.FOLLOW_UPS,
+    CORE_MODULES.TASKS,
+    CORE_MODULES.REPORTS,
+    CORE_MODULES.COMMUNICATIONS,
+    INDUSTRY_MODULE_CODES.AGRI_WHOLESALE,
+    INDUSTRY_MODULE_CODES.AGRI_PRODUCTS,
+    INDUSTRY_MODULE_CODES.AGRI_PROCUREMENT,
+    INDUSTRY_MODULE_CODES.AGRI_INVENTORY,
+    INDUSTRY_MODULE_CODES.AGRI_SALES,
+    INDUSTRY_MODULE_CODES.AGRI_RATES,
+    INDUSTRY_MODULE_CODES.AGRI_FINANCE,
+    INDUSTRY_MODULE_CODES.AGRI_REPORTS,
+  ],
 };
 
 export const INDUSTRY_PRIMARY_MODULE: Record<IndustryCode, string> = {
@@ -118,6 +142,7 @@ export const INDUSTRY_PRIMARY_MODULE: Record<IndustryCode, string> = {
   [IndustryCode.COACHING]: INDUSTRY_MODULE_CODES.COACHING,
   [IndustryCode.VEHICLE_SERVICE]: INDUSTRY_MODULE_CODES.VEHICLE_SERVICE,
   [IndustryCode.REAL_ESTATE]: INDUSTRY_MODULE_CODES.REAL_ESTATE,
+  [IndustryCode.AGRI_WHOLESALE]: INDUSTRY_MODULE_CODES.AGRI_WHOLESALE,
 };
 
 export const INDUSTRY_LABELS: Record<IndustryCode, string> = {
@@ -127,6 +152,7 @@ export const INDUSTRY_LABELS: Record<IndustryCode, string> = {
   [IndustryCode.COACHING]: 'Coaching / Tuition',
   [IndustryCode.VEHICLE_SERVICE]: 'Vehicle Service',
   [IndustryCode.REAL_ESTATE]: 'Real Estate',
+  [IndustryCode.AGRI_WHOLESALE]: 'Agri Wholesale / Mandi',
 };
 
 /** Demo tenants — fixed IDs keep platform DB and CRM DB in sync */
@@ -178,6 +204,14 @@ export const DEMO_TENANTS = [
     industry: IndustryCode.REAL_ESTATE,
     adminEmail: 'admin@realestate.nexhub.local',
     adminName: 'Realty Admin',
+  },
+  {
+    id: '11111111-1111-4111-8111-111111111107',
+    name: 'AgriLink Mandi',
+    slug: 'agrilink-mandi',
+    industry: IndustryCode.AGRI_WHOLESALE,
+    adminEmail: 'admin@agri.nexhub.local',
+    adminName: 'Agri Admin',
   },
 ] as const;
 

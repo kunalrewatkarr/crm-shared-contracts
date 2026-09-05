@@ -33,6 +33,14 @@ exports.INDUSTRY_MODULE_CODES = {
     REAL_ESTATE: 'real_estate',
     REAL_ESTATE_PROPERTIES: 'real_estate_properties',
     REAL_ESTATE_VISITS: 'real_estate_visits',
+    AGRI_WHOLESALE: 'agri_wholesale',
+    AGRI_PRODUCTS: 'agri_products',
+    AGRI_PROCUREMENT: 'agri_procurement',
+    AGRI_INVENTORY: 'agri_inventory',
+    AGRI_SALES: 'agri_sales',
+    AGRI_RATES: 'agri_rates',
+    AGRI_FINANCE: 'agri_finance',
+    AGRI_REPORTS: 'agri_reports',
 };
 /** Default modules enabled when provisioning a tenant for each industry */
 exports.INDUSTRY_DEFAULT_MODULES = {
@@ -104,6 +112,22 @@ exports.INDUSTRY_DEFAULT_MODULES = {
         exports.INDUSTRY_MODULE_CODES.REAL_ESTATE_PROPERTIES,
         exports.INDUSTRY_MODULE_CODES.REAL_ESTATE_VISITS,
     ],
+    [enums_1.IndustryCode.AGRI_WHOLESALE]: [
+        exports.CORE_MODULES.CORE_CRM,
+        exports.CORE_MODULES.LEADS,
+        exports.CORE_MODULES.FOLLOW_UPS,
+        exports.CORE_MODULES.TASKS,
+        exports.CORE_MODULES.REPORTS,
+        exports.CORE_MODULES.COMMUNICATIONS,
+        exports.INDUSTRY_MODULE_CODES.AGRI_WHOLESALE,
+        exports.INDUSTRY_MODULE_CODES.AGRI_PRODUCTS,
+        exports.INDUSTRY_MODULE_CODES.AGRI_PROCUREMENT,
+        exports.INDUSTRY_MODULE_CODES.AGRI_INVENTORY,
+        exports.INDUSTRY_MODULE_CODES.AGRI_SALES,
+        exports.INDUSTRY_MODULE_CODES.AGRI_RATES,
+        exports.INDUSTRY_MODULE_CODES.AGRI_FINANCE,
+        exports.INDUSTRY_MODULE_CODES.AGRI_REPORTS,
+    ],
 };
 exports.INDUSTRY_PRIMARY_MODULE = {
     [enums_1.IndustryCode.GYM]: exports.INDUSTRY_MODULE_CODES.GYM,
@@ -112,6 +136,7 @@ exports.INDUSTRY_PRIMARY_MODULE = {
     [enums_1.IndustryCode.COACHING]: exports.INDUSTRY_MODULE_CODES.COACHING,
     [enums_1.IndustryCode.VEHICLE_SERVICE]: exports.INDUSTRY_MODULE_CODES.VEHICLE_SERVICE,
     [enums_1.IndustryCode.REAL_ESTATE]: exports.INDUSTRY_MODULE_CODES.REAL_ESTATE,
+    [enums_1.IndustryCode.AGRI_WHOLESALE]: exports.INDUSTRY_MODULE_CODES.AGRI_WHOLESALE,
 };
 exports.INDUSTRY_LABELS = {
     [enums_1.IndustryCode.GYM]: 'Gym / Fitness',
@@ -120,6 +145,7 @@ exports.INDUSTRY_LABELS = {
     [enums_1.IndustryCode.COACHING]: 'Coaching / Tuition',
     [enums_1.IndustryCode.VEHICLE_SERVICE]: 'Vehicle Service',
     [enums_1.IndustryCode.REAL_ESTATE]: 'Real Estate',
+    [enums_1.IndustryCode.AGRI_WHOLESALE]: 'Agri Wholesale / Mandi',
 };
 /** Demo tenants — fixed IDs keep platform DB and CRM DB in sync */
 exports.DEMO_TENANTS = [
@@ -170,6 +196,14 @@ exports.DEMO_TENANTS = [
         industry: enums_1.IndustryCode.REAL_ESTATE,
         adminEmail: 'admin@realestate.nexhub.local',
         adminName: 'Realty Admin',
+    },
+    {
+        id: '11111111-1111-4111-8111-111111111107',
+        name: 'AgriLink Mandi',
+        slug: 'agrilink-mandi',
+        industry: enums_1.IndustryCode.AGRI_WHOLESALE,
+        adminEmail: 'admin@agri.nexhub.local',
+        adminName: 'Agri Admin',
     },
 ];
 exports.DEMO_TENANT_PASSWORD = 'Password123!';

@@ -4,7 +4,8 @@ export declare enum IndustryCode {
     VEHICLE_SERVICE = "vehicle_service",
     REAL_ESTATE = "real_estate",
     COACHING = "coaching",
-    CLINIC = "clinic"
+    CLINIC = "clinic",
+    AGRI_WHOLESALE = "agri_wholesale"
 }
 export declare enum TenantStatus {
     TRIAL = "trial",
